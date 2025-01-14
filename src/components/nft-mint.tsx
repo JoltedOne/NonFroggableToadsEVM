@@ -7,7 +7,7 @@ import { Toast } from "@/components/ui/toast";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-import { Minus, Plus } from "lucide-react";
+import { AlignCenter, Minus, Plus } from "lucide-react";
 import { useTheme } from "next-themes";
 import type { ThirdwebContract } from "thirdweb";
 import {
@@ -66,11 +66,27 @@ export function NftMint(props: Props) {
 		return null;
 	}
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
+		<div className="flex flex-col items-center justify-center min-h-screen bg-gray-0 dark:bg-gray-900 transition-colors duration-200">
 			<div className="absolute top-4 right-4">
 				<ConnectButton client={client} />
 			</div>
-			<Card className="w-full max-w-md">
+
+	{/* Add Logo with Glow */}
+	<div className="mb-6">
+  <a href="https://nonfroggabletoads.xyz" target="_blank" rel="noopener noreferrer">
+    <img
+      src="/Neonfrog.svg"
+      alt="NonFroggableToads Logo"
+      className="w-24 h-24 md:w-32 md:h-32 filter drop-shadow-[0_0_12px_rgba(138,43,226,0.8)]"
+    />
+  </a>
+</div>
+
+  {/* Title added here */}
+  <h1 className="text-5xl font-bold text-gray-100 dark:text-white mb-6">
+    NonFroggableToads
+	</h1>
+			<Card className="w-full max-w-md bg-gray-950 dark:bg-gray-800">
 				<CardContent className="pt-6">
 					<div className="aspect-square overflow-hidden rounded-lg mb-4 relative">
 						{props.isERC1155 ? (
@@ -95,10 +111,8 @@ export function NftMint(props: Props) {
 							{props.pricePerToken} {props.currencySymbol}/each
 						</div>
 					</div>
-					<h2 className="text-2xl font-bold mb-2 dark:text-white">
-						{props.displayName}
-					</h2>
-					<p className="text-gray-600 dark:text-gray-300 mb-4">
+					
+					<p className="text-gray-100 dark:text-gray-300 mb-4">
 						{props.description}
 					</p>
 					<div className="flex items-center justify-between mb-4">
@@ -130,7 +144,7 @@ export function NftMint(props: Props) {
 								<Plus className="h-4 w-4" />
 							</Button>
 						</div>
-						<div className="text-base pr-1 font-semibold dark:text-white">
+						<div className="text-white pr-1 font-semibold dark:text-white">
 							Total: {props.pricePerToken * quantity} {props.currencySymbol}
 						</div>
 					</div>
@@ -164,7 +178,7 @@ export function NftMint(props: Props) {
 				<CardFooter>
 					{account ? (
 						<ClaimButton
-							theme={"light"}
+							theme={"dark"}
 							contractAddress={props.contract.address}
 							chain={props.contract.chain}
 							client={props.contract.client}
@@ -192,8 +206,8 @@ export function NftMint(props: Props) {
 											}
 							}
 							style={{
-								backgroundColor: "black",
-								color: "white",
+								backgroundColor: "yellowgreen",
+								color: "red",
 								width: "100%",
 							}}
 							disabled={isMinting}
@@ -213,6 +227,47 @@ export function NftMint(props: Props) {
 					)}
 				</CardFooter>
 			</Card>
+
+			<div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+  {/* Whitepaper Button */}
+  <a
+    href="https://jolted.one/nonfroggablewp"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex flex-col items-center px-4 py-2 bg-gray-950 text-yellowgreen border border-white font-semibold rounded-lg shadow hover:bg-gray-400 transition"
+  >
+    <span className="text-lg">Whitepaper</span>
+    <span className="text-sm text-yellowgreen/80 mt-1">
+      Discover the roadmap and key resources.
+    </span>
+  </a>
+
+  {/* Marketplace Button */}
+  <a
+    href="https://link-to-marketplace.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex flex-col items-center px-4 py-2 bg-gray-950 text-yellowgreen border border-white font-semibold rounded-lg shadow hover:bg-gray-400 transition"
+  >
+    <span className="text-xl">Marketplace</span>
+    <span className="text-m text-yellowgreen/80 mt-1">
+      Explore all frogs on the secondary market.
+    </span>
+  </a>
+
+  {/* Jolted Shop Button */}
+  <a
+    href="https://jolted.one"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex flex-col items-center px-4 py-2 bg-gray-950 text-yellowgreen border border-white font-semibold rounded-lg shadow hover:bg-gray-400 transition"
+  >
+    <span className="text-lg">Jolted Shop</span>
+    <span className="text-sm text-yellowgreen/80 mt-1">
+      Shop frog-inspired clothing and accessories.
+    </span>
+  </a>
+</div>
 			{true && (
 				<Toast className="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-md">
 					Successfully minted {quantity} NFT{quantity > 1 ? "s" : ""}
