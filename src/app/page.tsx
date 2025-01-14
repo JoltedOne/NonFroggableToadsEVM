@@ -93,8 +93,8 @@ export default function Home() {
 		queryOptions: { enabled: !!currency },
 	});
 
-	const pricePerToken = 0.01; // Fixed price in ETH
-	
+	const pricePerToken = 0.003; // Fixed price in ETH
+
 	const currencySymbol = "ETH"; // Fixed currency symbol
 
 	return (
