@@ -231,7 +231,7 @@ export function NftMint(props: Props) {
 			<div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
   {/* Whitepaper Button */}
   <a
-    href="https://jolted.one/nonfroggablewp"
+    href="https://jolted.one/pages/nonfroggablewp"
     target="_blank"
     rel="noopener noreferrer"
     className="flex flex-col items-center px-4 py-2 bg-gray-950 text-yellowgreen border border-white font-semibold rounded-lg shadow hover:bg-gray-400 transition"
@@ -264,7 +264,7 @@ export function NftMint(props: Props) {
   >
     <span className="text-lg">Jolted Shop</span>
     <span className="text-sm text-yellowgreen/80 mt-1">
-      Shop frog-inspired clothing and accessories.
+      Frog-inspired clothing and accessories.
     </span>
   </a>
 </div>
