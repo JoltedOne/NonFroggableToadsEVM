@@ -71,21 +71,21 @@ export function NftMint(props: Props) {
 				<ConnectButton client={client} />
 			</div>
 
-	{/* Add Logo with Glow */}
-	<div className="mb-6">
-  <a href="https://nonfroggabletoads.xyz" target="_blank" rel="noopener noreferrer">
-    <img
-      src="/Neonfrog.svg"
-      alt="NonFroggableToads Logo"
-      className="w-24 h-24 md:w-32 md:h-32 filter drop-shadow-[0_0_12px_rgba(138,43,226,0.8)]"
-    />
-  </a>
-</div>
+	 {/* Add Logo with Glow */}
+	 <div className="flex justify-center mt-12">
+    <a href="https://nonfroggabletoads.xyz" target="_blank" rel="noopener noreferrer">
+      <img
+        src="/Neonfrog.svg"
+        alt="NonFroggableToads Logo"
+        className="w-24 h-24 md:w-32 md:h-32 filter drop-shadow-[0_0_12px_rgba(138,43,226,0.8)]"
+      />
+    </a>
+  </div>
 
-  {/* Title added here */}
-  <h1 className="text-5xl font-bold text-gray-100 dark:text-white mb-6">
+  {/* Title */}
+  <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center text-gray-100 dark:text-white mt-6 px-4">
     NonFroggableToads
-	</h1>
+  </h1>
 			<Card className="w-full max-w-md bg-gray-950 dark:bg-gray-800">
 				<CardContent className="pt-6">
 					<div className="aspect-square overflow-hidden rounded-lg mb-4 relative">
