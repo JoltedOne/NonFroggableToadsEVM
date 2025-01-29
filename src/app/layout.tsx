@@ -8,8 +8,8 @@ import { ToastProvider } from "@/components/ui/toast";
 const gluten = Gluten({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "NonFroggableToads",
-	description: "4,444 Rare Poison Dart Frogs ready to be discovered!",
+	title: "Jolted Abstracts",
+	description: "Open Edition Mint for Abstract Chain Art!",
 };
 
 export default function RootLayout({

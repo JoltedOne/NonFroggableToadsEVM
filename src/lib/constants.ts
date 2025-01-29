@@ -1,13 +1,13 @@
 /**
  * Change this to the contract address of your NFT collection
  */
-export const defaultNftContractAddress = "0x215654315389AC54e690DDe48cb42354D8233f46";
+export const defaultNftContractAddress = "0xA724820f03a7AC6091a911840300BCC26Ca77b11";
 
 /**
  * Change this to the chainId that your nft collection is deployed on
  * Look for your chain: https://thirdweb.com/chainlist
  */
-export const defaultChainId = 1868;
+export const defaultChainId = 2741;
 
 /**
  * Only applicable to ERC1155 Edition Drop contract
