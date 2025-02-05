@@ -135,7 +135,7 @@ export function NftMint(props: Props) {
 					{/* Minting Progress Bar */}
 					<div className="mb-4">
   						<p className="text-gray-100 dark:text-gray-300 text-sm mb-1">
-   							 Minted: {isMintedLoading || isSupplyLoading ? "Loading..." : `${minted} / ${total}`}
+   							 Minted: {isMintedLoading || isSupplyLoading ? "Loading..." : `${minted} / 4444`}
  					 </p>
  						 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 relative">
    					 <div
