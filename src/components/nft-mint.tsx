@@ -260,12 +260,14 @@ export function NftMint(props: Props) {
 							connectButton={{ style: { width: "100%" } }}
 						/>
 					)}
-					{/* Max Minting Limit Notice */}
-					<div className="text-center text-gray-400 text-sm mb-2">
- 					Max 5 per wallet
-					</div>
+					
 
 				</CardFooter>
+				{/* Max Minting Limit Notice */}
+				<div className="text-center text-gray-400 text-sm mb-2">
+ 					Max 5 per wallet
+				</div>
+				
 			</Card>
 
 			<div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
