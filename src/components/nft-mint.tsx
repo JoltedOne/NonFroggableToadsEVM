@@ -94,18 +94,18 @@ export function NftMint(props: Props) {
 
 	 {/* Add Logo with Glow */}
 	 <div className="flex justify-center mt-12">
-    <a href="https://jolted.us" target="_blank" rel="noopener noreferrer">
+    <a href="https://nonfroggabletoads.xyz" target="_blank" rel="noopener noreferrer">
       <img
-        src="/mintbolt.svg"
-        alt="Jolted Logo"
+        src="/Neonfrog.svg"
+        alt="NonFroggableToads Logo"
         className="w-24 h-24 md:w-32 md:h-32 filter drop-shadow-[0_0_12px_rgba(138,43,226,0.8)]"
       />
     </a>
   </div>
 
   {/* Title */}
-  <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center text-indigolavender dark:text-gray mt-6 px-4">
-    Jolted Abstracts
+  <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center text-gray-100 dark:text-white mt-6 px-4">
+    NonFroggableToads
   </h1>
 			<Card className="w-full max-w-md bg-gray-950 dark:bg-gray-800">
 				<CardContent className="pt-6">
@@ -241,8 +241,8 @@ export function NftMint(props: Props) {
 											}
 							}
 							style={{
-								backgroundColor: "#7de1bc",
-								color: "#3f3f57",
+								backgroundColor: "yellowgreen",
+								color: "red",
 								width: "100%",
 							}}
 							disabled={isMinting}
@@ -266,27 +266,27 @@ export function NftMint(props: Props) {
 			<div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
   {/* Whitepaper Button */}
   <a
-    href="https://linktr.ee/JOLT3D"
+    href="https://jolted.one/pages/nonfroggablewp"
     target="_blank"
     rel="noopener noreferrer"
-    className="flex flex-col items-center px-4 py-2 bg-gray-950 text-indigolavender border border-white font-semibold rounded-lg shadow hover:bg-gray-400 transition"
+    className="flex flex-col items-center px-4 py-2 bg-gray-950 text-yellowgreen border border-white font-semibold rounded-lg shadow hover:bg-gray-400 transition"
   >
-    <span className="text-lg">Directory</span>
-    <span className="text-sm text-mintgreen/80 mt-1">
-      Discover All Jolted Drops.
+    <span className="text-lg">Whitepaper</span>
+    <span className="text-sm text-yellowgreen/80 mt-1">
+      Discover the roadmap and key resources.
     </span>
   </a>
 
   {/* Marketplace Button */}
   <a
-    href="https://Jolted.us"
+    href="https://www.fractalvisions.io/collections/9e32e38db216caff11e64b522ad24047/collection"
     target="_blank"
     rel="noopener noreferrer"
-    className="flex flex-col items-center px-4 py-2 bg-gray-950 text-indigolavender border border-white font-semibold rounded-lg shadow hover:bg-gray-400 transition"
+    className="flex flex-col items-center px-4 py-2 bg-gray-950 text-yellowgreen border border-white font-semibold rounded-lg shadow hover:bg-gray-400 transition"
   >
-    <span className="text-xl">Marketplace coming soon</span>
-    <span className="text-m text-mintgreen/80 mt-1">
-      Explore all Abstract Drops on the secondary market.
+    <span className="text-xl">Marketplace</span>
+    <span className="text-m text-yellowgreen/80 mt-1">
+      Explore all frogs on the secondary market.
     </span>
   </a>
 
@@ -295,16 +295,16 @@ export function NftMint(props: Props) {
     href="https://jolted.one"
     target="_blank"
     rel="noopener noreferrer"
-    className="flex flex-col items-center px-4 py-2 bg-gray-950 text-indigolavender border border-white font-semibold rounded-lg shadow hover:bg-gray-400 transition"
+    className="flex flex-col items-center px-4 py-2 bg-gray-950 text-yellowgreen border border-white font-semibold rounded-lg shadow hover:bg-gray-400 transition"
   >
     <span className="text-lg">Jolted Shop</span>
-    <span className="text-sm text-mintgreen/80 mt-1">
+    <span className="text-sm text-yellowgreen/80 mt-1">
       Frog-inspired clothing and accessories.
     </span>
   </a>
 </div>
 			{true && (
-				<Toast className="fixed bottom-4 right-4 bg-blue-500 text-white p-4 rounded-md">
+				<Toast className="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-md">
 					Successfully minted {quantity} NFT{quantity > 1 ? "s" : ""}
 					{useCustomAddress && customAddress ? ` to ${customAddress}` : ""}!
 				</Toast>

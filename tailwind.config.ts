@@ -22,8 +22,6 @@ const config: Config = {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
 			yellowgreen: '#9acd32', // Add the yellowgreen color
-			mintgreen: '#7de1bc', // add the mintgreen color
-			indigolavender: '#9393ef', //add blurple color
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
