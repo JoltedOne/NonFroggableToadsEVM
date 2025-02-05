@@ -21,6 +21,7 @@ import { client } from "@/lib/thirdwebClient";
 import React from "react";
 import { toast } from "sonner";
 import { Skeleton } from "./ui/skeleton";
+import { useReadContract } from "thirdweb/react";
 
 type Props = {
 	contract: ThirdwebContract;
@@ -42,6 +43,26 @@ export function NftMint(props: Props) {
 	const [customAddress, setCustomAddress] = useState("");
 	const { theme, setTheme } = useTheme();
 	const account = useActiveAccount();
+
+	// Fetch total minted
+	const { data: totalMintedData, isPending: isMintedLoading } = useReadContract({
+		contract: props.contract,
+		method: "function totalMinted() view returns (uint256)",
+		params: [],
+	  });
+	
+	  // Fetch total supply
+	  const { data: totalSupplyData, isPending: isSupplyLoading } = useReadContract({
+		contract: props.contract,
+		method: "function totalSupply() view returns (uint256)",
+		params: [],
+	  });
+	
+	  // Convert fetched values to numbers
+	  const minted = totalMintedData ? Number(totalMintedData.toString()) : 0;
+	  const total = totalSupplyData ? Number(totalSupplyData.toString()) : 0;
+	  const progress = total > 0 ? (minted / total) * 100 : 0;
+	
 
 	const decreaseQuantity = () => {
 		setQuantity((prev) => Math.max(1, prev - 1));
@@ -111,7 +132,21 @@ export function NftMint(props: Props) {
 							{props.pricePerToken} {props.currencySymbol}/each
 						</div>
 					</div>
-					
+					{/* Minting Progress Bar */}
+					<div className="mb-4">
+  						<p className="text-gray-100 dark:text-gray-300 text-sm mb-1">
+   							 Minted: {isMintedLoading || isSupplyLoading ? "Loading..." : `${minted} / ${total}`}
+ 					 </p>
+ 						 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 relative">
+   					 <div
+    					  className="h-3 rounded-full transition-all"
+     						 style={{
+        					width: `${progress}%`,
+        					background: `linear-gradient(to right, #a4ff00, #e3ff00)`,
+   	  					 }}
+   						 ></div>
+  						</div>
+					</div>
 					<p className="text-gray-100 dark:text-gray-300 mb-4">
 						{props.description}
 					</p>
