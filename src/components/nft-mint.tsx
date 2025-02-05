@@ -61,7 +61,7 @@ export function NftMint(props: Props) {
 	  // Convert fetched values to numbers
 	  const minted = totalMintedData ? Number(totalMintedData.toString()) : 0;
 	  const total = totalSupplyData ? Number(totalSupplyData.toString()) : 0;
-	  const progress = total > 0 ? (minted / total) * 100 : 0;
+	  const progress = total > 0 ? (minted / 4444) * 100 : 0;
 	
 
 	const decreaseQuantity = () => {
@@ -260,6 +260,11 @@ export function NftMint(props: Props) {
 							connectButton={{ style: { width: "100%" } }}
 						/>
 					)}
+					{/* Max Minting Limit Notice */}
+					<div className="text-center text-gray-400 text-sm mb-2">
+ 					Max 5 per wallet
+					</div>
+
 				</CardFooter>
 			</Card>
 
