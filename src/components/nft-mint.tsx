@@ -91,9 +91,11 @@ export function NftMint(props: Props) {
 			<div className="absolute top-4 right-4">
 				<ConnectButton client={client} />
 			</div>
+			
+	<div className="h-16"></div> {/* Spacer div */}
 
 	 {/* Add Logo with Glow */}
-	 <div className="flex justify-center mt-12">
+	 <div className="flex justify-center mt-20">
     <a href="https://nonfroggabletoads.xyz" target="_blank" rel="noopener noreferrer">
       <img
         src="/Neonfrog.svg"
@@ -267,7 +269,7 @@ export function NftMint(props: Props) {
 				<div className="text-center text-gray-400 text-sm mb-2">
  					Max 5 per wallet
 				</div>
-				
+
 			</Card>
 
 			<div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
